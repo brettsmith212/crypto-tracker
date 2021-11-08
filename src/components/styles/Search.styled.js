@@ -22,7 +22,7 @@ export const SearchDiv = styled.div`
   input {
     height: 2rem;
     width: 100%;
-    padding: 3% 0;
+    padding: 3% 1.5%;
     font-size: ${({ theme }) => theme.fontSize.input};
   }
 `;
