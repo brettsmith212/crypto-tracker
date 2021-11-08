@@ -1,3 +1,3 @@
 # Crypto Tracker
 
-## Search your favorite cryto currencies and track the prices
+## Search your favorite crypto currencies and track the prices

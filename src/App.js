@@ -1,15 +1,8 @@
 import { ThemeProvider } from "styled-components";
+import { theme } from "./components/styles/Theme";
 import Navbar from "./components/Navbar";
 import GlobalStyles from "./components/styles/Global";
-
-const theme = {
-  colors: {
-    header: "#dee2e6",
-    body: "#fff",
-    footer: "#dee2e6",
-    font: "#4f4f4f",
-  },
-};
+import Search from "./components/Search";
 
 function App() {
   return (
@@ -17,6 +10,7 @@ function App() {
       <>
         <GlobalStyles />
         <Navbar></Navbar>
+        <Search></Search>
       </>
     </ThemeProvider>
   );

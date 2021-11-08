@@ -84,8 +84,12 @@ html {
 body {
   font-family: "Roboto Mono", monospace;
   background: ${({ theme }) => theme.colors.body};
-  color: ${({ theme }) => theme.colors.font};
+  color: ${({ theme }) => theme.colors.fontColor};
   line-height: 1.5;
+}
+
+input {
+    font-family: "Roboto Mono", monospace;
 }
 `;
 

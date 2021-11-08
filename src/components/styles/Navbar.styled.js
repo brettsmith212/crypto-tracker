@@ -26,6 +26,6 @@ export const Logo = styled.div`
   a {
     cursor: pointer;
     text-decoration: none;
-    color: ${({ theme }) => theme.colors.font};
+    color: ${({ theme }) => theme.colors.fontColor};
   }
 `;
