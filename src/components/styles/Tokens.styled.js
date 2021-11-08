@@ -14,6 +14,7 @@ export const Card = styled.div`
   margin: 3%;
   padding: 2.5%;
   text-align: center;
+  cursor: pointer;
 
   box-shadow: 2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
     6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
