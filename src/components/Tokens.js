@@ -8,7 +8,12 @@ function Tokens(props) {
 
   let tokensList = filteredTokens.map((token) => {
     return (
-      <Card>
+      <Card
+        onClick={() => {
+          props.clicked(token);
+        }}
+        key={token.id}
+      >
         <img src={token.image} alt="Token Displayed" />
         <h1>{token.name}</h1>
         <h2>${token.current_price}</h2>
@@ -17,7 +22,14 @@ function Tokens(props) {
     );
   });
 
-  return <Section>{tokensList}</Section>;
+  return (
+    <Section>
+      <div>
+        <h2>Tokens Available</h2>
+      </div>
+      <div>{tokensList}</div>
+    </Section>
+  );
 }
 
 export default Tokens;

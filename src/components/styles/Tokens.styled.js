@@ -1,20 +1,35 @@
 import styled from "styled-components";
 
 export const Section = styled.section`
+  min-height: 40vh;
   height: 100%;
   background-color: ${({ theme }) => theme.colors.section};
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
 `;
 
 export const Card = styled.div`
-  height: 20rem;
-  width: 20rem;
+  height: 23rem;
+  width: 23rem;
   margin: 3%;
   padding: 2.5%;
   text-align: center;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 
   box-shadow: 2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
     6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
