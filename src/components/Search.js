@@ -41,6 +41,7 @@ function Search() {
 
   return (
     <>
+      <WatchList savedToken={savedToken} />
       <Section>
         <SearchDiv>
           <form>
@@ -52,7 +53,6 @@ function Search() {
           </form>
         </SearchDiv>
       </Section>
-      <WatchList savedToken={savedToken} />
       <Tokens token={token} search={search} clicked={cardClickedHandler} />
     </>
   );

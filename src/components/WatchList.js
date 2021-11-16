@@ -1,5 +1,5 @@
 import React from "react";
-import { Section, Card } from "./styles/Tokens.styled";
+import { Section, Card, Blank } from "./styles/Tokens.styled";
 
 function WatchList(props) {
   let watchList = props.savedToken.map((token) => {
@@ -14,8 +14,18 @@ function WatchList(props) {
   });
   return (
     <Section>
-      <h2>WatchList</h2>
-      {watchList}
+      <div>
+        <h2>WatchList</h2>
+      </div>
+      {watchList.length === 0 ? (
+        <Blank>
+          <h2>Add To Watchlist!</h2>
+        </Blank>
+      ) : (
+        <div>
+          <Blank>{watchList}</Blank>
+        </div>
+      )}
     </Section>
   );
 }

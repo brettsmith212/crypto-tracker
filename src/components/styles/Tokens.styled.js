@@ -7,9 +7,12 @@ export const Section = styled.section`
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
+  flex-direction: column;
+  margin-top: 2rem;
 
   h2 {
-    font-size: 3rem;
+    margin-left: 5rem;
+    font-size: 2rem;
   }
 
   div {
@@ -20,6 +23,7 @@ export const Section = styled.section`
 `;
 
 export const Card = styled.div`
+  background-color: ${({ theme }) => theme.colors.section};
   height: 23rem;
   width: 23rem;
   margin: 3%;
@@ -49,6 +53,7 @@ export const Card = styled.div`
   h2 {
     font-size: 1.5rem;
     margin-top: 0.5rem;
+    margin-left: 0;
   }
   h3 {
     font-size: 1.2rem;
@@ -57,5 +62,17 @@ export const Card = styled.div`
   img {
     width: 4rem;
     height: 4rem;
+  }
+`;
+
+export const Blank = styled.div`
+  background: #484e53;
+  min-height: 15rem;
+  height: 100%;
+  width: 90%;
+  margin: 2.5% auto;
+
+  h2 {
+    margin: auto;
   }
 `;
