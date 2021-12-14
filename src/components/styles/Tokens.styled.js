@@ -67,7 +67,7 @@ export const Card = styled.div`
 
 export const Blank = styled.div`
   background: #484e53;
-  min-height: 15rem;
+  min-height: 25rem;
   height: 100%;
   width: 90%;
   margin: 2.5% auto;

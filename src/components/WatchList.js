@@ -4,7 +4,7 @@ import { Section, Card, Blank } from "./styles/Tokens.styled";
 function WatchList(props) {
   let watchList = props.savedToken.map((token) => {
     return (
-      <Card key={token.id}>
+      <Card key={token.id} onClick={() => props.clicked(token)}>
         <img src={token.image} alt="Token Displayed" />
         <h1>{token.name}</h1>
         <h2>${token.current_price}</h2>
@@ -22,9 +22,7 @@ function WatchList(props) {
           <h2>Add To Watchlist!</h2>
         </Blank>
       ) : (
-        <div>
-          <Blank>{watchList}</Blank>
-        </div>
+        <Blank>{watchList}</Blank>
       )}
     </Section>
   );

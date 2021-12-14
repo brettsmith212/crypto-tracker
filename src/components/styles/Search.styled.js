@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Section = styled.section`
-  height: 20vh;
+  height: 10rem;
   background-color: ${({ theme }) => theme.colors.section};
   display: flex;
   justify-content: center;
@@ -9,15 +9,15 @@ export const Section = styled.section`
 `;
 
 export const SearchDiv = styled.div`
-  height: 80%;
-  width: 50%;
+  height: 100%;
+  width: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
 
   form {
     width: 100%;
-    height: 2rem;
+    height: 100%;
   }
   input {
     height: 2rem;

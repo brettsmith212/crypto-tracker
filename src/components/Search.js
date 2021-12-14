@@ -20,7 +20,7 @@ function Search() {
       .catch((error) => console.log(error));
   }, []);
 
-  const cardClickedHandler = (token) => {
+  const addCardHandler = (token) => {
     let addToken = {
       key: token.id,
       name: token.name,
@@ -28,7 +28,20 @@ function Search() {
       current_price: token.current_price,
       symbol: token.symbol,
     };
-    setSavedToken((savedToken) => [...savedToken, addToken]);
+
+    const filteredArr = savedToken.filter(
+      (token) => token.key === addToken.key
+    );
+
+    if (filteredArr.length === 0) {
+      setSavedToken((savedToken) => [...savedToken, addToken]);
+    }
+  };
+
+  const deleteCardHandler = (token) => {
+    const newCardArr = savedToken.filter((elem) => elem.key !== token.key);
+    console.log(newCardArr);
+    setSavedToken((savedToken) => [...newCardArr]);
   };
 
   const onChangeHandler = (e) => {
@@ -37,11 +50,11 @@ function Search() {
 
   // console.log(token);
   // console.log(search);
-  console.log(savedToken);
+  // console.log(savedToken);
 
   return (
     <>
-      <WatchList savedToken={savedToken} />
+      <WatchList savedToken={savedToken} clicked={deleteCardHandler} />
       <Section>
         <SearchDiv>
           <form>
@@ -53,7 +66,7 @@ function Search() {
           </form>
         </SearchDiv>
       </Section>
-      <Tokens token={token} search={search} clicked={cardClickedHandler} />
+      <Tokens token={token} search={search} clicked={addCardHandler} />
     </>
   );
 }
