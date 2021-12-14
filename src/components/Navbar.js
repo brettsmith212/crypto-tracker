@@ -6,7 +6,7 @@ function NavBar() {
     <StyledHeader>
       <Navbar>
         <Logo>
-          <a href="#">Crypto Tracker</a>
+          <h2>Crypto Tracker</h2>
         </Logo>
       </Navbar>
     </StyledHeader>

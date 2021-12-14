@@ -20,7 +20,7 @@ export const Logo = styled.div`
   font-size: 2.5rem;
 
   &:hover {
-    transform: scale(0.98);
+    transform: scale(1.02);
   }
 
   a {
